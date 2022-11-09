@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+  <meta name="screen-orientation" content="portrait">
+  <meta name="msapplication-tap-highlight" content="no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Best Free Entertaiment App</title>
+  <meta name="Description"
+    content="Free to watch over 2500+ Live TV Channels, 90000+ Movies with 1080P/4K High Resolutions,Music, Radios.">
+	<style>
+		* {
+		  box-sizing: border-box;
+		  margin: 0;
+		  padding: 0;
+		}
+	
+		html,
+		body {
+		  user-select: none;
+		  color: #ffffff;
+		  overflow-x: hidden;
+		  width: 100%;
+		  height: 100%;
+		  position: relative;
+		  background-color: rgb(14, 8, 28);
+		}
+	
+		img {
+		  display: block;
+		  width: 100%;
+		}
+	
+		@media (max-width: 480px) {
+		  .pc_body {
+			display: none;
+			font-size: 0.03733rem;
+		  }
+		}
+	
+		@media (min-width: 481px) {
+		  .mobiel_body {
+			display: none;
+		  }
+		}
+	
+		a {
+		  color: #ffffff;
+		  text-decoration: none;
+		}
+	
+		.pc_body {
+		  font-size: 14px;
+		  position: relative;
+		  width: 100%;
+		  height: 100%;
+		}
+	
+		.pc_content {
+		  z-index: 99;
+		  position: absolute;
+		  right: 0;
+		  top: 0;
+		  bottom: 0;
+		  left: 0;
+		  display: flex;
+		  flex-direction: column;
+		  justify-content: space-between;
+		}
+	
+		.pc_head {
+		  width: 100%;
+		  background: rgba(0, 0, 0, 0.2);
+		  height: 86px;
+		  padding-left: 44px;
+		  padding-right: 44px;
+		  padding-top: 20px;
+		  padding-bottom: 20px;
+		  display: flex;
+		  flex-direction: row;
+		  justify-content: space-between;
+		  align-items: center;
+		}
+	
+		.pc_right {
+		  display: flex;
+		  flex-direction: column;
+		  justify-content: flex-end;
+		  align-items: flex-end;
+		  padding: 41px 70px 65px 44.5px;
+		}
+	
+		.pc_title {
+		  width: 700px;
+		}
+	
+		.pc_text {
+		  width: 640px;
+		}
+	
+		.pc_down_list {
+		  display: flex;
+		  flex-direction: row;
+		  align-items: center;
+		  justify-content: flex-end;
+		}
+	
+		.ios_down,
+		.android_down {
+		  width: 60%;
+		  margin-left: .05rem;
+		  position: relative;
+		}
+	
+		.ios_down:hover>.qr_code,
+		.android_down:hover>.qr_code {
+		  width: 150px;
+		  height: 150px;
+		  opacity: 1;
+		  transition: all 0.3s ease-in;
+		}
+	
+		.qr_code {
+		  overflow: hidden;
+		  transition: all 0.3s ease-out;
+		  opacity: 0;
+		  bottom: 100%;
+		  left: 50%;
+		  transform: translateX(-50%);
+		  position: absolute;
+		  width: 0px;
+		  height: 0px;
+		  box-sizing: border-box;
+		  padding: 10px;
+		  border-radius: 10px;
+		  background: #ffffff;
+		}
+	
+		.app_text_content {
+		  width: 700px;
+		  padding: 20px;
+		  border-radius: 10px;
+		  background: rgba(0, 0, 0, 0.2);
+		  color: #ffffff;
+		  font-size: 24px;
+		  line-height: 38px;
+		}
+	
+		.mobiel_body {
+		  font-size: 0.03733rem;
+		  position: relative;
+		  width: 100%;
+		  height: 100%;
+		}
+	
+		.btn_list {
+		  z-index: 999;
+		  display: flex;
+		  flex-direction: row;
+		  align-items: center;
+		  justify-content: space-evenly;
+		  position: absolute;
+		  top: 0.08rem;
+		  left: 0;
+		  right: 0;
+		  color: #ffffff;
+		  font-size: 0.0373rem;
+		}
+	
+		.btn_list .btn_item {
+		  display: flex;
+		  flex-direction: row;
+		  align-items: center;
+		  justify-content: center;
+		  border: 0.5px solid #ffffff;
+		  padding: 0.013rem 0.02rem;
+		  border-radius: 0.013rem;
+		}
+		.btn_list2 {
+		  z-index: 999;
+		  display: flex;
+		  flex-direction: row;
+		  align-items: center;
+		  justify-content: space-evenly;
+		  position: absolute;
+		 
+		  left: 0;
+		  right: 0;
+		  color: #ffffff;
+		  font-size: 0.0393rem;
+		}
+	
+		.btn_list2 .btn_item2 {
+		  display: flex;
+		  flex-direction: row;
+		  align-items: center;
+		  justify-content: center;
+		  border: 0.5px solid #ffffff;
+		  padding: 0.013rem 0.02rem;
+		  border-radius: 0.013rem;
+		}
+	
+		.mobiel_content {
+		  z-index: 99;
+		  position: absolute;
+		  right: 0;
+		  top: 0;
+		  bottom: 0;
+		  left: 0;
+		  padding: 0.146rem 0.0586rem 0.05rem 0.0586rem;
+		  display: flex;
+		  flex-direction: column;
+		  justify-content: flex-end;
+		  align-items: center;
+		}
+	
+		.mb_row {
+		  width: 100%;
+		  display: flex;
+		  flex-direction: row;
+		  align-items: flex-end;
+		  justify-content: space-between;
+		}
+	
+		.mb_logo {
+		  width: 1.96rem;
+		}
+	
+	
+		.mb_ios,
+		.mb_android,
+		.mb_qingliang {
+		  display: inline-block;
+		  width: 0.3933rem;
+		}
+	
+		.pc_logo {
+		  width: 62px;
+		}
+	
+		.pc_btn_list {
+		  display: flex;
+		  flex-direction: row;
+		  align-items: center;
+		}
+	
+		.pc_btn_list .btn_item {
+		  display: flex;
+		  flex-direction: row;
+		  align-items: center;
+		  justify-content: center;
+		  margin-left: 26px;
+		  width: 120px;
+		  height: 27.5px;
+		  border-radius: 10px;
+		  border: 0.9px solid #fff;
+		  color: #fff;
+		  font-size: 14px;
+		}
+	
+		.mb_down_list {
+		  padding: 0;
+		  margin: 0;
+		  border: 1px solid transparent;
+		  outline: none;
+		  background: transparent;
+		}
+	
+		.pc_tips_row {
+		  width: 100%;
+		  display: flex;
+		  align-items: center;
+		  flex-direction: row;
+		  justify-content: space-between;
+	
+		}
+	
+		#pc_url_qrcode {
+		  padding: 10px;
+		  border-radius: 10px;
+		  background: rgba(0, 0, 0, 0.2);
+		}
+	
+		.no-follow-linkbox {
+		  position: absolute;
+		  font-size: 12px;
+		  transform: translateX(-100%);
+		}
+		/* 移动端返回按钮 */
+		.mobile_back {
+		  height: .125rem;
+		  padding: .025rem;
+		  display: flex;
+		  justify-content: flex-start;
+		  position: fixed;
+		  top: 0;
+		  left: 0;
+		  z-index: 1001;
+		}
+		.mobile_back>img {
+		  width: auto;
+		  height: 100%;
+		  display: block;
+		}
+		/* 放大动画 */
+		@-webkit-keyframes heartBeat {
+		  0% {
+			-webkit-transform: scale(1);
+			transform: scale(1);
+		  }
+		  14% {
+			-webkit-transform: scale(1.3);
+			transform: scale(1.3);
+		  }
+		  28% {
+			-webkit-transform: scale(1);
+			transform: scale(1);
+		  }
+		  42% {
+			-webkit-transform: scale(1.3);
+			transform: scale(1.3);
+		  }
+		  70% {
+			-webkit-transform: scale(1);
+			transform: scale(1);
+		  }
+		}
+		@keyframes heartBeat {
+		  0% {
+			-webkit-transform: scale(1);
+			transform: scale(1);
+		  }
+		  14% {
+			-webkit-transform: scale(1.3);
+			transform: scale(1.3);
+		  }
+		  28% {
+			-webkit-transform: scale(1);
+			transform: scale(1);
+		  }
+		  42% {
+			-webkit-transform: scale(1.3);
+			transform: scale(1.3);
+		  }
+		  70% {
+			-webkit-transform: scale(1);
+			transform: scale(1);
+		  }
+		}
+		.heartBeat {
+		  -webkit-animation-name: heartBeat;
+		  animation-name: heartBeat;
+		  -webkit-animation-iteration-count:infinite;
+		  animation-iteration-count:infinite;
+		  -webkit-animation-duration: 1.3s;
+		  animation-duration: 1.3s;
+		  -webkit-animation-timing-function: ease-in-out;
+		  animation-timing-function: ease-in-out;
+		}
+		/* 安卓下载前安装指南打开按钮 */
+		.mobile_android_guide_btn {
+		  margin-top: 0.05rem;
+		  font-size: 0.04rem;
+		  color: #fff;
+		  text-decoration: underline;
+		  display: none;
+		}
+		/* 手机端弹出框 */
+		.mobile_android_dialog {
+		  overflow-y: scroll;
+		  background: center/cover no-repeat url("/index/image/android_setup.png?v=2022");
+		  display: none;
+		  position: absolute;
+		  top: 0;
+		  left: 0;
+		  bottom: 0;
+		  right: 0;
+		  z-index: 1000;
+		}
+		/* 安卓下载前安装指南 */
+		.mobile_android_guide {
+		  display: none;
+		}
+		.mobile_android_guide_title {
+		  margin: .03rem 0;
+		  text-align: center;
+		  font-size: 0.06rem;
+		}
+		.mobile_android_guide_subtitle {
+		  margin: .025rem 0;
+		  font-size: 0.045rem;
+		  display: flex;
+		  align-items: center;
+		  justify-content: center;
+		}
+		.mobile_android_guide_mark {
+		  width: 0.075rem;
+		  height: 0.075rem;
+		  margin-right: 0.01rem;
+		  font-size: 0.05rem;
+		  font-weight: 500;
+		  text-align: center;
+		  background: rgba(29, 27, 27, 0.15);
+		  border: 1px solid #FFFFFF;
+		  border-radius: 50%;
+		  display: inline-block;
+		  -webkit-box-sizing: border-box;
+		  box-sizing: border-box;
+		}
+		.mobile_android_guide_img {
+		  margin: 0.075rem 0.1rem 0 0.1rem;
+		}
+		.mobile_android_guide_prompt {
+		  margin-top: .04rem;
+		  text-align: center;
+		  font-size: 0.02rem;
+		  color: #FFD500;
+		}
+		.mobile_android_guide_download_btn {
+		  height: 0.1125rem;
+		  line-height: 0.1125rem;
+		  font-size: 0.035rem;
+		  border: 1px solid #FFFFFF;
+		  margin: 0.05rem;
+		  color: white;
+		  -webkit-filter: drop-shadow(0 0.026667rem 0.053333rem rgba(0, 0, 0, 0.3));
+		  filter: drop-shadow(0 0.026667rem 0.053333rem rgba(0, 0, 0, 0.3));
+		  background: rgba(29, 27, 27, 0.15);
+		  display: flex;
+		  align-items: center;
+		  justify-content: center;
+		}
+		/* 安卓报毒的安装教程 */
+		.mobile_android_tutorial {
+		  display: none;
+		}
+		.mobile_android_tutorial_title {
+		  transition: all 0.3s ease-in-out;
+		  transform: scale(1);
+		  width: 0.7095rem;
+		  height: 0.21rem;
+		  background: center/contain no-repeat url("/index/image/android_title.png?v=2022") ;
+		  margin: .15rem auto .125rem auto;
+		}
+		.mobile_android_tutorial_list {
+		  width: 75%;
+		  margin: 0.01rem auto;
+		  list-style: none;
+		}
+		.mobile_android_tutorial_list>li {
+		  height: 0.1125rem;
+		  line-height: 0.1125rem;
+		  background-color: rgba(255, 255, 255, 0.99);
+		  border-radius: 0.22rem;
+		  color: black;
+		  font-size: 0.045rem;
+		  text-align: center;
+		  margin: 0.055rem auto;
+		}
+	  </style>
+</head>
+
+<body>
+  <!--<div class="no-follow-linkbox">友情链接：<a href="https://"  class="nofollow-link">5</a>
+    <a href="https://"  class="nofollow-link">5</a>
+  </div>-->
+  <div class="no-follow-linkbox">If you need help, Please contact us on our Telegram (@sky4ktv). Thank you.</div>
+  <div class="pc_body">
+    <script>
+      if (document.documentElement.clientWidth > 480) {
+        if (window.location.hostname.indexOf("sp.cool") == -1) {
+          document.write(` <div style="width: 100%;height: 100%;">
+      <video src="https://qx7azuuxvkfktvdtoj825g.on.drv.tw/qx7azuuxvkfktvdtoj825g.on.drv.tw/cinematic-tension-trailer-nocopyright-background-music-shell-ghost-soundridemu_LeGPHRTE.mp4" muted autoplay="autoplay" loop="loop" width="100%" height="120%"
+        style="object-fit: cover" />
+    </div>`);
+        } else {
+          document.write(` <div style="width: 100%;height: 100%;">
+     <img width="100%" height="100%" src="https://reflectionsglobal.com/wp-content/uploads/2020/10/media_entertainment.png"
+        style="object-fit: cover" />
+    </div>`);
+        }
+      }  
+    </script>
+    <div class="pc_content">
+      <div class="pc_head">
+        <div class="pc_logo"><img src="https://telegra.ph/file/724b204c365396f93674d.png" /></div>
+        <div class="pc_btn_list">
+          <a href="https://t.me/sky4ktv">
+            <div class="btn_item">Telegram Channel</div>
+          </a>
+          <a href="https://t.me/sky_4K_app">
+            <div class="btn_item">Telegram Group</div>
+          </a>
+        </div>
+      </div>
+      <div class="pc_right">
+        <div class="pc_title">
+          <img src="https://telegra.ph/file/532f81473938925af1f99.png" />
+        </div>
+        <div class="pc_text">
+          <img src="https://telegra.ph/file/8d45efe884b489c627523.png" />
+        </div>
+
+        <div class="pc_down_list">
+          <!--<div class="ios_down"><a width="32" height="32"><img src="https://telegra.ph/file/38deae53736353bd3e775.png" width="32" height="32"/></a>
+            <div id="ios_qr_code" class="qr_code">
+
+            </div>
+          </div>
+          <div class="android_down">
+            <a href="https://download.tzycdlw.cn/squid/91video240-221105.apk"><img src="https://telegra.ph/file/bddfdf29b875f29d70d78.png" /></a>
+            <div id="android_qr_code" class="qr_code">
+
+            </div>
+          </div>-->
+        </div>
+        <div class="pc_tips_row">
+          <!--<div id="pc_url_qrcode">
+            <div style="text-align: center;padding-bottom: 10px;font-size: 16px;">Scan Me</div>
+          </div>
+          <div style="width: 20px;"></div>
+          <!--<div class="app_text_content">Sky4K LLC -Best FREE Entertaiment APP
+          <p style="font-size:15px;">Live TV, VOD, Music, Radio</p>
+          </div>-->
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="mobiel_body">
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="">
+          <img src="https://telegra.ph/file/54d8608e3bb602aa9850b.png"/>
+        </div>
+      </div>
+    </div>
+    <div class="btn_list">
+      <a href="https://t.me/sky4ktv">
+        <div class="btn_item">Telegram Channel</div>
+      </a>
+      <a href="https://t.me/sky_4K_app">
+            <div class="btn_item">Telegram Group</div>
+      </a>
+      
+    </div>
+    <div class="mobiel_content">
+     <div class="btn_list2">
+      <a href="https://bit.ly/3Uobo8O">
+        <div class="btn_item2">Download Now</div>
+      </a>
+     </div>
+     
+    </div>
+
+    </div>
+
+    <script>
+      // 状态{0: 首页, 1: 安卓安装教程, 2: 安卓报毒导航, 3: 报毒手机类型教程}
+      var globalAndroidStatus = 0;
+      // 安卓各个设备下载方法
+      function onChooseInstallDevice(value) {
+        globalAndroidStatus = 3;
+        $('.mobile_android_tutorial_content').hide();
+        const showContent = document.querySelector('#installContent');
+        showContent.innerHTML = `
+          <img src="/index/image/install_${value}.png?v=2022" alt="${value}"/>
+        `;
+        $('#installContent').fadeIn();
+      }
+      $(document).ready(() => {
+        var btn = document.getElementById('down_list');
+        var clipboard = new ClipboardJS(btn);
+
+        clipboard.on('success', function (e) {
+          console.log(e);
+        });
+
+        clipboard.on('error', function (e) {
+          console.log(e);
+        });
+      });
+      window.onload = function () {
+		function isPC() { //是否为PC端
+
+			var userAgentInfo = navigator.userAgent;
+			var Agents = ["Android", "iPhone",
+						"SymbianOS", "Windows Phone",
+						"iPad", "iPod"];
+			var flag = true;
+			for (var v = 0; v < Agents.length; v++) {
+				if (userAgentInfo.indexOf(Agents[v]) > 0) {
+					flag = false;
+					break;
+				}
+			}
+			return flag;
+		}
+		
+        isIOS = navigator.userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
+		                const swiper = new Swiper('.swiper', {
+              effect: 'fade',
+              fadeEffect: {
+                crossFade: true
+              },
+              autoplay: {
+                delay: 3000,
+              },
+            });
+        $('.mb_down_list').html(isIOS ?
+          '<div data-clipboard-text="sq_aff:9QaQ:notforstore"  class="mb_ios"><img src="/index/image/mb_ios.png?v=2022" /></div><a href="/index/pwa?aff_code=9QaQ" data-clipboard-text="sq_aff:9QaQ:notforstore" class="mb_qingliang"><img src="/index/image/mb_qingliang.png?v=202206"/></a>'
+          // '<a href="/index/pwa?aff_code=9QaQ" data-clipboard-text="sq_aff:9QaQ:notforstore" class="mb_qingliang"><img src="/index/image/mb_qingliang.png?v=2022"/></a>'
+          :
+          '<a href="" data-clipboard-text="sq_aff:9QaQ:notforstore" class="mb_android"><img src="/index/image/mb_android.png?v=2022" /></a>')
+        //   '<a href="https://download.tzycdlw.cn/squid/91video240-221105.apk" data-clipboard-text="sq_aff:9QaQ:notforstore" class="mb_android"><img src="/index/image/mb_android.png?v=2022" /></a><a style="margin-left:20px" href="https://yypwa.yypwa01.com/?sq_aff=5012702" data-clipboard-text="sq_aff:9QaQ:notforstore" class="mb_android"><img src="/index/image/a-n.jpg" /></a>')
+        if (!isIOS) {
+          $('.mb_down_list').css({
+            'justify-content': 'center'
+          })
+		  // 非ios显示下载前必看安装指南
+          $('.mobile_android_guide_btn').fadeIn();
+        }
+                  $('#android_qr_code').qrcode({
+            width: 130,
+            height: 130,
+            text: ""
+          });
+        $('#ios_qr_code').qrcode({
+          width: 130,
+          height: 130,
+          text: ""
+        });
+        $('.mb_ios').click(() => {
+          // alert('商店版暂时没有开放哦，请使用轻量版！');
+          var returned = window.confirm('如打开后无法看到app内容，请卸载后刷新官网重新点击iOS下载安装即可。\n由于苹果应用规则的关系，点击链结后的图标可能不一致，此属正常现象请放心安装。');
+          if (returned) {
+            window.location.href = "#";
+          }
+        })
+        $(".ios_down").click(function () {
+          alert('亲, 请用手机下载!')
+        });
+        $('#pc_url_qrcode').qrcode({
+          width: 200,
+          height: 200,
+          text: ""
+        })
+        console.log(window.location.href)
+        // 移动端安卓下载按钮点击事件
+        $(".mb_down_list").on('click', '.mb_android', function() {
+          globalAndroidStatus = 2;
+          $(".mobile_android_tutorial_content").show();
+          $(".mobile_android_tutorial").show();
+          $(".mobile_android_dialog").fadeIn();
+        })
+        // 移动端安卓下载必看指南按钮
+        $('.mobile_android_guide_btn').click(function() {
+          globalAndroidStatus = 1;
+          $(".mobile_android_guide").show();
+          $(".mobile_android_dialog").fadeIn();
+        })
+        // 手机端返回按钮
+        $('.mobile_back').click(() => {
+          console.log('手机端返回按钮', globalAndroidStatus);
+          switch (globalAndroidStatus) {
+            case 3:
+              $(".mobile_android_tutorial_content").show();
+              $(".installContent").fadeOut();
+              globalAndroidStatus = 2;
+              break;
+            case 2:
+              $(".mobile_android_tutorial").hide();
+              $(".mobile_android_dialog").fadeOut();
+              globalAndroidStatus = 0;
+              break;
+            case 1:
+              $(".mobile_android_guide").hide();
+              $(".mobile_android_dialog").fadeOut();
+              globalAndroidStatus = 0;
+              break;
+            default:
+              break;
+          }
+        })
+        onChooseInstallDevice('huawei');
+      }
+		// new ClipboardJS('.mb_ios');
+    </script>
+    <script type="text/javascript">
+        // 计算rem单位
+        (function (doc, win) {
+          var docEl = doc.documentElement,
+            isIOS = navigator.userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/),
+            dpr = isIOS ? Math.min(win.devicePixelRatio, 3) : 1,
+            dpr = window.top === window.self ? dpr : 1, //被iframe引用时，禁止缩放
+            dpr = 1,
+            scale = 1 / dpr,
+            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
+          docEl.dataset.dpr = dpr;
+          var metaEl = doc.createElement('meta');
+          metaEl.name = 'viewport';
+          metaEl.content = 'initial-scale=' + scale + ',maximum-scale=' + scale + ', minimum-scale=' + scale;
+          docEl.firstElementChild.appendChild(metaEl);
+          var recalc = function () {
+            var width = docEl.clientWidth;
+            if (width / dpr > 750) {
+              width = 750 * dpr;
+            }
+            // 乘以100，px : rem = 100 : 1
+            docEl.style.fontSize = width + 'px';
+          };
+          recalc()
+          if (!doc.addEventListener) return;
+          win.addEventListener(resizeEvt, recalc, false);
+        })(document, window);
+
+    </script>
+
+</body>
+
+</html>
